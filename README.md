@@ -1,3 +1,6 @@
+# React19_Demo
+react19学习中编写的简单 demo
+
 # 新建项目
 - pnpm create vite@latest
 
@@ -129,5 +132,3 @@ const Button = (props) => {
 ## React Compiler
 - 结合 babel 插件来使用，实现 react 的编译时优化
 - 可以从编译时，运行时来分析实现的自动优化(偏理论)
-
-
