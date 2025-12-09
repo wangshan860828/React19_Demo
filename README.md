@@ -30,10 +30,15 @@ export default Button
   2. 进阶用法：`components/features/5.UseState+UseReducer/1.UseState.tsx`
 - useRef：用于在函数式组件中创建引用。
 - useEffect：用于在函数式组件中添加副作用。
-- useReducer：用于在函数式组件中使用 reducer 模式。
-- useContext：用于在函数式组件中使用上下文。
-- useCallback：用于在函数式组件中缓存函数。
-- useMemo：用于在函数式组件中缓存计算结果。
+- useReducer：用于在函数式组件中使用 reducer 模式。`详细内容见下文。`
+- useContext：用于在函数式组件中使用上下文。`详细内容见下文。`
+- `React.memo`：这是一个高价组件，用于包裹你的函数式组件，它会对传入的 props 进行浅比较，只有在 props 发生变化时，才会重新渲染被包裹的组件。这是防止因父组件渲染而导致的不必要子组件渲染的主要工具。
+- useMemo：用于“记忆化”一个计算结果，它接收一个函数和一个依赖性数组，只有在依赖性发生变化时，才会重新执行该函数并返回新的值，它主要用于两个场景：
+  1. 缓存开销巨大的计算结果，避免在每次渲染时都重复计算。
+  2. 当向一个被 React.memo 包裹的子组件传递对象或数组作为 prop时，使用 useMemo 来保证该 prop 的引用稳定性。
+- useCallback：用于“记忆化”一个函数，它与 useMemo 类似，但专门用于函数，主要使用场景是：当向一个被 React.memo 包裹的子组件传递函数作为 prop 时，使用 useCallback 来保证该 prop 的引用稳定性。
+**`核心原则：不要过早优化`** 这些 API `React.memo`、`useMemo`、`useCallback` 自身也有成本（内存占用和比较开销）。只有你通过 `React DevTools Profiler` 等工具确认了某个组件存在性能瓶颈时，才应该考虑使用他们进行优化。
+`useMemo`和`useCallback` 的组件位置：`components/features/7.Memo/index.tsx`
 - useImperativeHandle：用于在函数式组件中自定义暴露的实例方法。
 - useLayoutEffect：用于在函数式组件中添加布局副作用。
 

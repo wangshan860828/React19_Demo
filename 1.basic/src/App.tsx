@@ -11,6 +11,7 @@ import { SuspenseDemo } from './components/features/3.Suspense/SuspenseDemo'
 import { NewDemo } from './components/features/4.SuspenseNew/NewDemo'
 import { UseReducer } from './components/features/5.UseState+UseReducer/2.UseReducer'
 import { Parent } from './components/features/6.UseContext/1.Parent'
+import { Memo } from './components/features/7.Memo'
 // import { OldDemo } from './components/features/4.SuspenseNew/OldDemo'
 
 function App() {
@@ -41,6 +42,10 @@ function App() {
         </div>
         <UseReducer />
         <Parent />
+        <h2 style={{ color: 'red'}}>
+          Memo 学习项目
+        </h2><br />
+        <Memo />
     </>
   )
 }
