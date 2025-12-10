@@ -12,6 +12,7 @@ import { NewDemo } from './components/features/4.SuspenseNew/NewDemo'
 import { UseReducer } from './components/features/5.UseState+UseReducer/2.UseReducer'
 import { Parent } from './components/features/6.UseContext/1.Parent'
 import { Memo } from './components/features/7.Memo'
+import { MyHooks } from './components/features/9.CustomHooks'
 // import { OldDemo } from './components/features/4.SuspenseNew/OldDemo'
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           Memo 学习项目
         </h2><br />
         <Memo />
+        <MyHooks />
     </>
   )
 }

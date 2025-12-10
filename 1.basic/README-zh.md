@@ -137,3 +137,24 @@ const Button = (props) => {
 ## React Compiler
 - 结合 babel 插件来使用，实现 react 的编译时优化
 - 可以从编译时，运行时来分析实现的自动优化(偏理论)
+
+## 自定义 Hooks `components/features/9.CustomHooks`
+- `useLocalStorageState`：用于在组件中存储和获取本地存储的数据。
+
+## 泛型组件和泛型 Hooks（建议用 function 定义的方式，例如：useLocalStorageState）
+- useLocalStorageState 是泛型 Hook 的定义
+- 泛型组件：用于在定义组件时，指定组件的 props 类型。`components/features/10.TComponets/list.tsx`
+
+## React 事件对象的精确类型
+- 鼠标事件：`React.MouseEvent<HTMLElement>`
+- 表单元素变化事件：`React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>`
+- 表单提交事件：`React.FormEvent<HTMLFormElement>`
+
+## zod 库
+- `运行时类型校验库`，zod 准许我们定义一个数据的 schema模式，然后用它来解析未知来源的数据。
+
+## router 的类型
+- createBrowserRouter：用于创建浏览器路由。
+- createHashRouter：用于创建哈希路由。
+- createMemoryRouter：用于创建内存路由。
+- createStaticRouter：用于创建静态路由。
